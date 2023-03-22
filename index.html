@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- hight chart -->
+    
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- fontawesom -->
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+   </head>
+<body>
+<div class="sidebar close">
+    <div class="logo-details">
+      <i class="fad fa-futbol"></i>
+      <span class="logo_name"  style="border-bottom-right-radius: 20px;">Football</span>
+    </div>
+    <div style="background: white;">
+    <ul class="nav-links" style="background: black;">
+      <li style="background: white;margin-left: 10px;border-top-left-radius:50px;
+      border-bottom-left-radius:50px;">
+        <a href="#">
+          <i class='bx bx-grid-alt'style="color: black;margin-left: -10px;" ></i>
+          <span class="link_name" style="color: black;">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+      <li  style="border-top-right-radius: 30px;">
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">All Legue</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">All Legue</a></li>
+          <li><a href="#">Premier League</a></li>
+          <li><a href="#">LaLiga</a></li>
+          <li><a href="#">Ligue France</a></li>
+          <li><a href="#">ITaLy serie a</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="link_name">Teams</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Teams</a></li>
+          <li><a href="#">Asernal</a></li>
+          <li><a href="#">Man city</a></li>
+          <li><a href="#">Real Madrid</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="link_name">Codes</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Codes</a></li>
+        </ul>
+      </li>
+      <li>
+	    <div class="profile-details">
+	      <div class="profile-content">
+	        <!--<img src="image/profile.jpg" alt="profileImg">-->
+	      </div>
+	      <div class="name-job">
+	        <div class="profile_name">Logout</div>
+	      </div>
+	      <i class='bx bx-log-out' ></i>
+	    </div>
+  		</li>
+	</ul>
+    </div>   
+</div>
+  <section class="home-section">
+    <div class="home-content" style="border-bottom: 1px solid #333;">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Dashboard</span>
+    </div>
+    <div class="total-data">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-std">
+            <div class="number">64</div>
+            <div class="card-name">Premier League</div>
+          </div>
+        <div class="icon-box">
+            <i class="fas fa-user"></i>
+        </div>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-std">
+            <div class="number">42</div>
+            <div class="card-name">LaLiga</div>
+          </div>
+        <div class="icon-box">
+            <i class="fas fa-users"></i>
+        </div>
+          </div>
+      </div>        
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-std">
+            <div class="number">68</div>
+            <div class="card-name">Ligue France</div>
+          </div>
+        <div class="icon-box">
+            <i class="far fa-users-class"></i>
+        </div>
+          </div>
+      </div> 
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-std">
+            <div class="number">30</div>
+            <div class="card-name">ITaLy serie a</div>
+          </div>
+        <div class="icon-box">
+            <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+          </div>
+      </div> 
+    </div>
+    <div class="all-chart">
+    	<div class="box">
+    		<canvas id="myChart-polarArea"  height="200" width="400"></canvas>
+    	</div>
+    	<div class="box">
+    		<canvas id="myChart-bar" height="200" width="400"></canvas>
+    	</div>
+    </div>
+    <div class="all-chart-1">
+      <div>
+        <div class="text-center">Best Codes</div>
+        <div class="box-1" style="overflow-y: scroll;">
+          <div class="d-flex" style="width: 100%;">
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+          </div>
+          <div class="d-flex" style="width: 100%;">
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+          </div>
+          <div class="d-flex" style="width: 100%;">
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+            <div class="bg-info rounded-circle m-1" style="width: 75px; height: 75px; box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);;">
+              <img class="rounded-circle" src="image/best_codes.jpeg" width="75" height="75" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text-center">Premier League 2022/23</div>
+        <div class="box-1" style="overflow-y: scroll;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Team</th>
+                <th>PL</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>F</th>
+                <th>A</th>
+                <th>GD</th>
+                <th>Pts</th>
+                <th colspan="6">Ptsast 6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Arsenal</td>
+                <td>27</td>
+                <td>21</td>
+                <td>3</td>
+                <td>3</td>
+                <td>62</td>
+                <td>25</td>
+                <td>37</td>
+                <td>66</td>
+                <td>
+                  <div class="d-flex">
+                    <div class="bg-danger m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                  </div>
+               
+                </td>
+              </tr>
+              <tr>
+                <td>Arsenal</td>
+                <td>27</td>
+                <td>21</td>
+                <td>3</td>
+                <td>3</td>
+                <td>62</td>
+                <td>25</td>
+                <td>37</td>
+                <td>66</td>
+                <td>
+                  <div class="d-flex">
+                    <div class="bg-danger m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                  </div>
+               
+                </td>
+              </tr>
+              <tr>
+                <td>Arsenal</td>
+                <td>27</td>
+                <td>21</td>
+                <td>3</td>
+                <td>3</td>
+                <td>62</td>
+                <td>25</td>
+                <td>37</td>
+                <td>66</td>
+                <td>
+                  <div class="d-flex">
+                    <div class="bg-danger m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                  </div>
+               
+                </td>
+              </tr>
+              <tr>
+                <td>Arsenal</td>
+                <td>27</td>
+                <td>21</td>
+                <td>3</td>
+                <td>3</td>
+                <td>62</td>
+                <td>25</td>
+                <td>37</td>
+                <td>66</td>
+                <td>
+                  <div class="d-flex">
+                    <div class="bg-danger m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                  </div>
+               
+                </td>
+              </tr>
+              <tr>
+                <td>Arsenal</td>
+                <td>27</td>
+                <td>21</td>
+                <td>3</td>
+                <td>3</td>
+                <td>62</td>
+                <td>25</td>
+                <td>37</td>
+                <td>66</td>
+                <td>
+                  <div class="d-flex">
+                    <div class="bg-danger m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                  </div>
+               
+                </td>
+              </tr>
+              <tr>
+                <td>Arsenal</td>
+                <td>27</td>
+                <td>21</td>
+                <td>3</td>
+                <td>3</td>
+                <td>62</td>
+                <td>25</td>
+                <td>37</td>
+                <td>66</td>
+                <td>
+                  <div class="d-flex">
+                    <div class="bg-danger m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                    <div class="bg-success m-1" style="width: 10px;height: 10px;"></div>
+                  </div>
+               
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer class="main-footer bg-light p-3">
+      <div class="float-end d-none d-sm-block ">
+        <b>Develop By: <a href="https://adminlte.io">Infinity Consulting Sole.,Ltd</a></b>
+      </div>
+      <strong class="p-3">Copyright &copy; 2023 AKY Service Company</strong>
+    </footer>
+    	
+  </section>
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+  	<script src="
+https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js
+"></script>
+	<script src="chart.js" type="text/javascript"></script>
+</body>
+</html>
