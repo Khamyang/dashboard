@@ -19,78 +19,89 @@
 <div class="sidebar close">
     <div class="logo-details">
       <i class="fad fa-futbol"></i>
-      <span class="logo_name"  style="border-bottom-right-radius: 20px;">Football</span>
+      <span class="logo_name">Football</span>
     </div>
     <div style="background: white;">
-    <ul class="nav-links" style="background: black;">
-      <li style="background: white;margin-left: 10px;border-top-left-radius:50px;
-      border-bottom-left-radius:50px;">
-        <a href="#">
-          <i class='bx bx-grid-alt'style="color: black;margin-left: -10px;" ></i>
-          <span class="link_name" style="color: black;">Dashboard</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Dashboard</a></li>
-        </ul>
-      </li>
-      <li  style="border-top-right-radius: 30px;">
-        <div class="iocn-link">
+      <ul class="nav-links">
+        <li style="background: white;margin-left: 10px;border-top-left-radius:50px;
+        border-bottom-left-radius:50px;">
           <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name">All Legue</span>
+            <i class='bx bx-grid-alt'style="color: black;margin-left: -10px;" ></i>
+            <span class="link_name" style="color: black;">Dashboard</span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">All Legue</a></li>
-          <li><a href="#">Premier League</a></li>
-          <li><a href="#">LaLiga</a></li>
-          <li><a href="#">Ligue France</a></li>
-          <li><a href="#">ITaLy serie a</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Dashboard</a></li>
+          </ul>
+        </li>
+        <li >
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-collection' ></i>
+              <span class="link_name">All Legue</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">All Legue</a></li>
+            <li><a href="#">Premier League</a></li>
+            <li><a href="#">LaLiga</a></li>
+            <li><a href="#">Ligue France</a></li>
+            <li><a href="#">ITaLy serie a</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-book-alt' ></i>
+              <span class="link_name">Teams</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Teams</a></li>
+            <li><a href="#">Asernal</a></li>
+            <li><a href="#">Man city</a></li>
+            <li><a href="#">Real Madrid</a></li>
+          </ul>
+        </li>
+        <li>
           <a href="#">
-            <i class='bx bx-book-alt' ></i>
-            <span class="link_name">Teams</span>
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="link_name">Codes</span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Teams</a></li>
-          <li><a href="#">Asernal</a></li>
-          <li><a href="#">Man city</a></li>
-          <li><a href="#">Real Madrid</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-pie-chart-alt-2' ></i>
-          <span class="link_name">Codes</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Codes</a></li>
-        </ul>
-      </li>
-      <li>
-	    <div class="profile-details">
-	      <div class="profile-content">
-	        <!--<img src="image/profile.jpg" alt="profileImg">-->
-	      </div>
-	      <div class="name-job">
-	        <div class="profile_name">Logout</div>
-	      </div>
-	      <i class='bx bx-log-out' ></i>
-	    </div>
-  		</li>
-	</ul>
-    </div>   
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Codes</a></li>
+          </ul>
+        </li>
+        <li>
+    	    <div class="logout-details">
+    	      <div >
+    	      </div>
+    	      <div class="name-job">
+    	        <div class="logout">Logout</div>
+    	      </div>
+    	      <i class='bx bx-log-out' ></i>
+    	    </div>
+    		</li>
+  	</ul>
+  </div>   
 </div>
   <section class="home-section">
-    <div class="home-content" style="border-bottom: 1px solid #333;">
+    <div class="home-content">
       <i class='bx bx-menu' ></i>
       <span class="text">Dashboard</span>
+      <ul>
+        <li class="user-profile">
+          <div class="user-profile-image" >
+            <img src="image/user-icon.png" alt="" width="40" height="40">
+          </div>
+        </li>
+        <li class="user-name">
+          <div>
+            <p style="">Hello: Admin</p>
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="total-data">
       <div class="card">
@@ -221,7 +232,7 @@
                 <th colspan="6">Ptsast 6</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody >
               <tr>
                 <td>Arsenal</td>
                 <td>27</td>
@@ -377,7 +388,7 @@
   }
   let sidebar = document.querySelector(".sidebar");
   let sidebarBtn = document.querySelector(".bx-menu");
-  console.log(sidebarBtn);
+  // console.log(sidebarBtn);
   sidebarBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("close");
   });
